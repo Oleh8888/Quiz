@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "//oleh8888.github.io/Quiz/static/css/main.1da01c32.chunk.css",
+    "main.js": "//oleh8888.github.io/Quiz/static/js/main.c821a3c4.chunk.js",
+    "main.js.map": "//oleh8888.github.io/Quiz/static/js/main.c821a3c4.chunk.js.map",
+    "runtime-main.js": "//oleh8888.github.io/Quiz/static/js/runtime-main.6c44d1af.js",
+    "runtime-main.js.map": "//oleh8888.github.io/Quiz/static/js/runtime-main.6c44d1af.js.map",
+    "static/js/2.0a150f84.chunk.js": "//oleh8888.github.io/Quiz/static/js/2.0a150f84.chunk.js",
+    "static/js/2.0a150f84.chunk.js.map": "//oleh8888.github.io/Quiz/static/js/2.0a150f84.chunk.js.map",
+    "static/js/3.47b6af78.chunk.js": "//oleh8888.github.io/Quiz/static/js/3.47b6af78.chunk.js",
+    "static/js/3.47b6af78.chunk.js.map": "//oleh8888.github.io/Quiz/static/js/3.47b6af78.chunk.js.map",
+    "index.html": "//oleh8888.github.io/Quiz/index.html",
+    "static/css/main.1da01c32.chunk.css.map": "//oleh8888.github.io/Quiz/static/css/main.1da01c32.chunk.css.map",
+    "static/js/2.0a150f84.chunk.js.LICENSE.txt": "//oleh8888.github.io/Quiz/static/js/2.0a150f84.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c44d1af.js",
+    "static/js/2.0a150f84.chunk.js",
+    "static/css/main.1da01c32.chunk.css",
+    "static/js/main.c821a3c4.chunk.js"
+  ]
+}
