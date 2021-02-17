@@ -8,15 +8,11 @@ import {Answers} from "./components/Answers/answers";
 import {Correct} from "./components/Correct/correct";
 
 
-
-
-
-
 function App() {
-  const dispatch = useDispatch();
+  const dispatch= useDispatch();
   const quiz = useSelector(state => state.fetchQuiz.fetchedPosts);
   const counter = useSelector(state => state.counterQuiz)
-  const [color, setColor] = useState("")
+  const [color, setColor] = useState(" ")
   const [finalCorrect, setFinalCorrect] = useState();
 
   const mark = () => {
@@ -38,10 +34,10 @@ function App() {
         </div>
       </header>
       {quiz.map( (q,idx) => (
-        <div key={q.id} className="quiz-blocks">
-         <h5 className="questions" key={q.id}>{q.question}</h5>
-          <div className="quiz-blocks">
-            <Answers quiz={quiz[idx]} color={color}/>
+        <div  className="quiz-blocks" key={q.id}>
+         <h5 className="questions" >{q.question}</h5>
+          <div className="quiz-answers-blocks" >
+            <Answers quiz={quiz[idx]} color={color} id={q.id}/>
             <Correct quiz={quiz[idx]} setColor={setColor} color={color}/>
           </div>
          </div>

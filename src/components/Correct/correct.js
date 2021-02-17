@@ -1,37 +1,47 @@
-import React from "react";
+import {useState} from "react";
 import { decrement, increment } from "../../actions/counterActions"
 import { useDispatch, useSelector } from "react-redux";
+import classNames from 'classnames';
+import './correct.css'
 
-export const Correct = ({quiz,color, setColor}) => {
+export const Correct = ({quiz,color, setColor,}) => {
+    const [fault, setFault] = useState(null);
     const dispatch = useDispatch();
-
-    const isCorrect = (event,correct) => {
-        if (correct==="true"){
-            event.target.color = setColor("green");
-            dispatch(increment())
-            console.log()
     
-        }
-        else if (correct==="false") {
-            event.target.color =setColor("red");
-          dispatch(decrement())
-          console.log()
-        } else {
-            alert("noth")
-        }
+    const isCorrect = () => {
+        dispatch(increment())
+        setColor("green")
     }
 
+    const isUnCorrect = () => {
+        dispatch(decrement())
+        setColor("red")
+   }
+
+    const check = (event,correct) => {
+        if(correct==="true"){
+            isCorrect();
+            console.log(correct)
+        } else if (correct==="false"){
+            isUnCorrect();
+            console.log(correct)
+        } else {
+            return null;
+        }
+    }
+    
+
     return(
-        <>
-        {Object.keys(quiz.correct_answers).map((cor) => {
+        <div className="checkboxes">
+        {Object.keys(quiz.correct_answers).map((cor,idxCorrect) => {
             let correct = quiz.correct_answers[cor];
             return (
-                 <label class="container"  >{correct}
-                     <input type="checkbox" style={{backgroundColor: color}} />
-                     <span class="checkmark" onClick={(event) => isCorrect(event,correct)}></span>
+                 <label className="container" key={idxCorrect} >{correct}
+                     <input type="checkbox" onClick={event => check(event,correct)}/>
+                     <span className="checkmark" style={{color: color}} ></span>
                  </label>
                  );
             })}
-         </>
+         </div>
     );
 }
