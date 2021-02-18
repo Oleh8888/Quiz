@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import './correct.css'
 
 export const Correct = ({quiz,color, setColor,}) => {
+    // const containerId = classNames("container", "correct" ? "uncorrect": )
     const [fault, setFault] = useState(null);
     const dispatch = useDispatch();
     
@@ -36,9 +37,9 @@ export const Correct = ({quiz,color, setColor,}) => {
         {Object.keys(quiz.correct_answers).map((cor,idxCorrect) => {
             let correct = quiz.correct_answers[cor];
             return (
-                 <label className="container" key={idxCorrect} >{correct}
+                 <label className="container"  key={idxCorrect} style={{color: color}}>{correct}
                      <input type="checkbox" onClick={event => check(event,correct)}/>
-                     <span className="checkmark" style={{color: color}} ></span>
+                     <span className="checkmark"></span>
                  </label>
                  );
             })}
